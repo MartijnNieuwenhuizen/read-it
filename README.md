@@ -1,8 +1,8 @@
 # Read-it
-Read-it is an application that's built as **1.** a study project to learn ES6 **2.** a way to store and read my articles **3.** read the articles.
+Read-it is an application that's built as **1.** a study project to learn ES6 **2.** a way to store and read my articles **3.** read the articles you liked to read.
 
 ## The problem
-Whenever I see an article I want to read, but not right now, I save it as a Bookmark, store it in a Trello board, add it to a Google Docs file, download the URL or create a massive amount of tabs that I eventually close because my computer get's too slow. So I currently have a good way to save my articles and no motivations to read them later on, since my lists get so long, I don't even know where to start.
+Whenever I see an article I want to read, but not right now, I save it as a Bookmark, store it in a Trello board, add it to a Google Docs file, download the URL or create a massive amount of tabs that I eventually close because my computer get's too slow. So I currently don't have a good way to save my articles and no motivations to read them later on, since my lists get so long I don't even know where to start.
 
 ## The solution
 Every week I try to read the Smashing Magazine reading list because on every Saturday morning I get an email as a notification. That works, so why not create your own reading list?
