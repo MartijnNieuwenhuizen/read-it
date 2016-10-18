@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include base/head %>
+
+  <main>
+
+    <ul>
+      <% for (var i = 0; i < collection.length; i++) { %>
+
+        <li>
+          <a href="<%= collection[i].url %>" target="_blank">
+            <h2><%= collection[i].title %></h2>
+            <p><%= collection[i].moment %></p>
+
+            <% if (collection[i].tags) { %>
+              <ul>
+                <% for (var t = 0; t < collection[i].tags.length; t++) { %>
+                  <li><%= collection[i].tags[t] %></li>
+                <% } %>
+              </ul>
+            <% } %>
+          </a>
+        </li>
+
+      <% } %>
+    </ul>
+
+  </main>
+
+<% include base/footer %>
