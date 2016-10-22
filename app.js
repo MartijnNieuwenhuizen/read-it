@@ -9,6 +9,7 @@ const fs = require('fs');
 
 const routes = require('./routes/index');
 const users = require('./routes/users');
+const collection = require('./routes/collection');
 
 const app = express();
 
@@ -54,6 +55,7 @@ app.use((req, res, next) => {
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/collection', collection);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

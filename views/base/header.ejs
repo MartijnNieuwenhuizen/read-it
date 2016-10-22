@@ -1,7 +1,16 @@
 <header>
-  <h1><%= title %></h1>
 
+  <nav>
+    <ul>
+      <li><a href="/"><h1><%= title %></h1></a></li>
+      <li><a href="collection/add">Add</a></li>
+      <% if (!user) { %>
+        <li><a href="/users/login">Login</a></li>
+        <li><a href="/users/sign-up">Sign up</a></li>
+      <% } %>
+    </ul>
+  </nav>
   <% if (user) { %>
-  <p>Hello <%= user.name.first %> </p>
+  <p>Hello <a href="/user/?:<%= user.name.first %>"><%= user.name.first %></a> </p>
   <% } %>
 </header>
