@@ -3,25 +3,27 @@
   <main>
 
     <ul>
-      <% for (var i = 0; i < collection.length; i++) { %>
+        <% for (var i = 0; i < collection.length; i++) { %>
 
-        <li>
-          <a href="<%= collection[i].url %>" target="_blank">
-            <h2><%= collection[i].title %></h2>
-            <p><%= collection[i].moment %></p>
+          <li>
+            <a href="<%= collection[i].url %>" target="_blank">
+              <h2><%= collection[i].title %></h2>
+              <p><%= collection[i].moment %></p>
 
-            <% if (collection[i].tags) { %>
-              <ul>
-                <% for (var t = 0; t < collection[i].tags.length; t++) { %>
-                  <li><%= collection[i].tags[t] %></li>
-                <% } %>
-              </ul>
-            <% } %>
-          </a>
-        </li>
+              <% if (collection[i].tags) { %>
+                <ul>
+                  <% for (var t = 0; t < collection[i].tags.length; t++) { %>
+                    <li><%= collection[i].tags[t] %></li>
+                  <% } %>
+                </ul>
+              <% } %>
+            </a>
+          </li>
 
-      <% } %>
+        <% } %>
     </ul>
+
+    <%- include modules/new-collection %>
 
   </main>
 
