@@ -1,0 +1,18 @@
+<form class="" action="/collection/add" method="post" class="">
+  <fieldset>
+    <legend class="">Add new item to your Collection</legend>
+
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title">
+
+    <label for="url">URL</label>
+    <input type="url" name="url" id="url">
+
+    <%# TODO: checke if comma sepetated or enter seperated list is the best way. For now it's comma seperated %>
+    <%# TODO: give tags if you type. For speed, safe them in localstorage %>
+    <label for="tags">Tags</label>
+    <input type="text" name="tags" id="tags">
+
+    <button type="submit">Add item to Collection</button>
+  </fieldset>
+</form>

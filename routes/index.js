@@ -12,18 +12,14 @@ router.get('/', auth.login, (req, res, next) => {
 
   const user = res.locals.user;
 
-    // Get Collections
+    // Get all Collections
     fs.readFile(collectionsPath, (error, datas) => {
       if (error) { console.log(error); }
 
-      const collectionId = user.collectionId;
-
-      const collections = JSON.parse(datas);
-      const userCollection = collections.filter(singleCollection => singleCollection.id === collectionId);
-
-      const currentCollection = userCollection[0].collection[0].links;
-
-      console.log(userCollection[0].collection[0].links);
+      const collectionId = user.collectionId; // Get the collectionId from this user
+      const collections = JSON.parse(datas); // Parse data
+      const userCollection = collections.filter(singleCollection => singleCollection.id === collectionId); // Filter the collections for the one that matches the users
+      const currentCollection = userCollection[0].collection[0].links; // Get all links from the userCollection
 
       const content = {
         title: 'Tag-it',
